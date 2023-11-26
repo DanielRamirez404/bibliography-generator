@@ -1,0 +1,32 @@
+:root {
+  --background: #e9ebec;
+  --text: #171b1c;
+  --primary: #b6adaa;
+  --secondary: #cdd3d5;
+  --accent: #746763;
+}
+
+body {
+  margin: 25px 0px;
+  background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+header {
+  border-bottom: solid 1px var(--primary);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content:space-around;
+}
+
+footer {
+  border-top: solid 1px var(--primary);
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
