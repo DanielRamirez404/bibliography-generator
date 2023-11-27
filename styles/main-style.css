@@ -7,15 +7,21 @@
 }
 
 body {
-  margin: 25px 0px;
+  margin: 100px 0px;
   background-color: var(--background);
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow-x: hidden;
+  font-family: 'mulish', sans-serif;
+}
+
+h1, h2 {
+  font-family: 'nova square', sans-serif;
 }
 
 header {
+  background-color: var(--background);
   border-bottom: solid 1px var(--primary);
   width: 100%;
   position: fixed;
@@ -25,6 +31,7 @@ header {
 }
 
 footer {
+  background-color: var(--background);
   border-top: solid 1px var(--primary);
   width: 100%;
   position: absolute;
