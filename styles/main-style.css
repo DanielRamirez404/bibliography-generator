@@ -12,6 +12,27 @@ h1, h2, h3 {
   margin: 10px;
 }
 
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"] + label {
+  position: relative;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: x-small;
+  align-items: center;
+  padding: 0.75em;
+  border-radius: 15px;
+  margin-right: 5px;
+  user-select: none;
+  transition: all 0.35s;
+}
+
+input[type="radio"]:checked + label  {
+  font-size: medium;
+}
+
 header {
   border-bottom: solid 1px;
   width: 100%;
@@ -27,4 +48,9 @@ footer {
   width: 100%;
   position: absolute;
   bottom: 0;
+}
+
+.type-selection {
+  height: 50px;
+  margin: 10px 0px;
 }

@@ -17,3 +17,11 @@ body, header, footer {
 header, footer {
   border-color: var(--primary);
 }
+
+input[type="radio"] + label  {
+  background-color: var(--secondary);
+}
+
+input[type="radio"]:checked + label  {
+  background-color: var(--primary);
+}
