@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/main-style.css">
     <link rel="stylesheet" href="styles/colors.css">
+    <link rel="stylesheet" href="styles/source-style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mulish&family=Nova+Square&display=swap" rel="stylesheet">
@@ -24,33 +25,46 @@
     </header>
     <main>
       <form class="type-selection">
-        <input type="radio" id="webpage" name="source-type">
+        <input type="radio" id="webpage" name="source-type" checked="checked">
         <label for="webpage">Webpage</label>
         <input type="radio" id="book" name="source-type">
         <label for="book">Book</label>
       </form>
-      <form>
+      <form class="source-info">
         <fieldset>
-          <label for="title">Title:</label>
-          <input type="text" name="title">
-          <br>
-          <label for="link">Link:</label>
-          <input type="text" name="link">
-          <br>
-          <label for="name">Author's name</label>
-          <input type="text" name="name">
-          <br>
-          <label for="last-name">Author's last name</label>
-          <input type="text" name="last-name">
-          <br>
-          <label for="year">Year:</label>
-          <input type="text" name="year">
-          <br>
-          <br>
+          <div class="data-input">
+            <label for="title">Title:</label>
+            <input type="text" name="title">
+          </div>
+          <div class="data-input">
+            <label for="name">Author's Name:</label>
+            <input type="text" name="name">
+          </div>
+          <div class="data-input">
+            <label for="last-name">Author's Last Name:</label>
+            <input type="text" name="last-name">
+          </div>
+          <div class="data-input">
+            <label for="year">Year:</label>
+            <input type="text" name="year">
+          </div>
+          <div class="data-input">
+            <label for="city">Publishing City:</label>
+            <input type="text" name="city">
+          </div>
+          <div class="data-input">
+            <label for="company">Publishing Company:</label>
+            <input type="text" name="company">
+          </div>
+          <div class="data-input">
+            <label for="link">Link:</label>
+            <input type="text" name="link">
+          </div>
           <button>Get Bibliography</button>
-          <br>
-          <output>output</output>
         </fieldset>
+        <output>output: (before)</output>
+        <br>
+        <output>output:</output>
       </form>
     </main>
     <footer>

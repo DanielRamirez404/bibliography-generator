@@ -54,3 +54,16 @@ footer {
   height: 50px;
   margin: 10px 0px;
 }
+
+button {
+  cursor: pointer;
+  padding: 0.75em;
+  border-radius: 15px;
+  border: none;
+  user-select: none;
+  transition: all 0.15s;
+}
+
+button:hover {
+  transform: translate(0, -3px);
+}

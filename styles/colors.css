@@ -1,8 +1,9 @@
 :root {
+  --transparent-background: rgba(0, 0, 0, 0.08);
   --background: #e9ebec;
   --text: #171b1c;
   --primary: #b6adaa;
-  --secondary: #cdd3d5;
+  --secondary: #e1d4d0;
   --accent: #746763;
 }
 
@@ -19,9 +20,25 @@ header, footer {
 }
 
 input[type="radio"] + label  {
-  background-color: var(--secondary);
+  background-color: var(--transparent-background);
 }
 
 input[type="radio"]:checked + label  {
+  background-color: var(--secondary);
+}
+
+.source-info fieldset {
+  background-color: var(--transparent-background);
+}
+
+button {
   background-color: var(--primary);
+}
+
+button:active {
+  opacity: 0.7;
+}
+
+button:hover {
+  box-shadow: 0px 3px 10px 1px var(--primary);
 }
