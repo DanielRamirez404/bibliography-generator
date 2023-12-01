@@ -45,12 +45,12 @@ button:hover {
 }
 
 
-.data-input input[type="text"] {
+.data-input input {
   color: var(--text);
   background-color: var(--secondary-background);
 }
 
-.data-input input[type="text"]:focus {
+.data-input input:focus {
   outline: none;
   border-color: var(--primary);
 }
