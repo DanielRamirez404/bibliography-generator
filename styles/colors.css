@@ -1,6 +1,7 @@
 :root {
   --transparent-background: rgba(0, 0, 0, 0.08);
   --background: #e9ebec;
+  --secondary-background: #f7f8f8;
   --text: #171b1c;
   --primary: #b6adaa;
   --secondary: #e1d4d0;
@@ -41,4 +42,15 @@ button:active {
 
 button:hover {
   box-shadow: 0px 3px 10px 1px var(--primary);
+}
+
+
+.data-input input[type="text"] {
+  color: var(--text);
+  background-color: var(--secondary-background);
+}
+
+.data-input input[type="text"]:focus {
+  outline: none;
+  border-color: var(--primary);
 }

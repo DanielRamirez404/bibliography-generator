@@ -41,6 +41,7 @@ header {
   display: flex;
   justify-content: space-around;
   align-content: center;
+  z-index: 1;
 }
 
 footer {
@@ -66,4 +67,9 @@ button {
 
 button:hover {
   transform: translate(0, -3px);
+}
+
+main {
+  width: 350px;
+  max-width: 50%;
 }
