@@ -1,15 +1,26 @@
+.type-selection {
+  position: relative;
+  right: 30px;
+}
+
 .source-info {
   width: 100%;
+  display: inline-flex;
+  flex-direction: column;
+  align-content: center;
+  align-self: center;
 }
 
 .source-info fieldset {
+  width: 100%;
   border: none;
   padding: 20px 35px;
   border-radius: 35px;
-  display: flex;
+  display: inline-flex;
   gap: 20px;
   flex-direction: column;
   align-content: center;
+  align-self: center;
 }
 
 .source-info fieldset h2 {
@@ -19,7 +30,7 @@
 
 .data-input {
   width: 100%;
-  display: flex;
+  display: inline-flex;
 }
 
 .data-input input[type="text"] {
