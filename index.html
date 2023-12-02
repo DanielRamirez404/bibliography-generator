@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/scripts/generator.js"></script>
     <link rel="stylesheet" href="styles/main-style.css">
     <link rel="stylesheet" href="styles/colors.css">
     <link rel="stylesheet" href="styles/source-style.css">
@@ -34,31 +35,28 @@
         <fieldset>
           <h2>Source Data</h2>
           <div class="data-input title-input">
-            <input type="text" placeholder="Title">
+            <input id="title" type="text" placeholder="Title">
           </div>
           <div class="data-input name-input">
-            <input type="text" placeholder="Author's name">
+            <input id="name" type="text" placeholder="Author's name">
           </div>
-          <div class="data-input lsat-name-input">
-            <input type="text" placeholder="Author's last name">
+          <div class="data-input last-name-input">
+            <input id="last-name" type="text" placeholder="Author's last name">
           </div>
           <div class="data-input year-input">
-            <input type="number" placeholder="Year">
+            <input id="year" type="number" placeholder="Year">
           </div>
-          <div class="data-input city-input">
-            <input type="text" placeholder="Publishing City">
-          </div>
-          <div class="data-input company-input">
-            <input type="text" placeholder="Publishing Company">
+          <div class="data-input publisher-input">
+            <input id="publisher" type="text" placeholder="Publisher">
           </div>
           <div class="data-input link-input">
-            <input type="text" placeholder="Link">
+            <input id="link" type="text" placeholder="Link">
           </div>
-          <button>Get Bibliography</button>
+          <button type="button" onclick="updateOutput()">Get Bibliography</button>
         </fieldset>
         <div class="citation-output">
           <h2>Citation:</h2>
-          <output>(some input)</output>
+          <output>(some output)</output>
         </div>
       </form>
     </main>
