@@ -45,12 +45,21 @@
   font-family: 'mulish', sans-serif;
 }
 
-.source-info output::before {
+.citation-output {
+  display: flex;
+  flex-direction: column;
+}
+
+.citation-output h2 {
   position: relative;
-  right: 30px;
-  content: "Citation:";
-  display: block;
-  font-family: 'nova square', sans-serif;
-  margin: 20px 0px;
-  font-size: x-large;
+  right: 40px;
+}
+
+.citation-output output {
+  width: 100%;
+  border-radius: 20px;
+  padding: 20px 0px;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 12pt;
 }

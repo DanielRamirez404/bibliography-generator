@@ -53,4 +53,9 @@ button:hover {
 .data-input input:focus {
   outline: none;
   border-color: var(--primary);
+  box-shadow: inset 0px 3px 10px var(--secondary);
+}
+
+.source-info output {
+  background-color: var(--secondary-background);
 }
