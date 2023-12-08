@@ -11,12 +11,12 @@ function applyTheme() {
     colors.style.setProperty('--secondary', '#e1d4d0');
     colors.style.setProperty('--accent', '#746763');
   } else {
-    colors.style.setProperty('--transparent-background', 'rgba(0, 0, 0, 1)');
-    colors.style.setProperty('--background', '#171717');
-    colors.style.setProperty('--secondary-background', '#f7f8f8');
+    colors.style.setProperty('--transparent-background', 'rgba(0, 0, 0, 0.75)');
+    colors.style.setProperty('--background', '#12100e');
+    colors.style.setProperty('--secondary-background', '#171717');
     colors.style.setProperty('--text', '#f2f2f2');
-    colors.style.setProperty('--primary', '#525152');
-    colors.style.setProperty('--secondary', '#232423');
+    colors.style.setProperty('--primary', '#646363');
+    colors.style.setProperty('--secondary', '#30271f');
     colors.style.setProperty('--accent', '#7d7e7c');
   }
 }
