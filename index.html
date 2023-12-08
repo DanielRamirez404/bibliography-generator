@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="/scripts/themes.js"></script>
     <script src="/scripts/generator.js"></script>
+    <script src="/scripts/source-type-changer.js"></script>
     <link rel="stylesheet" href="styles/main-style.css">
     <link rel="stylesheet" href="styles/colors.css">
     <link rel="stylesheet" href="styles/source-style.css">
@@ -13,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Mulish&family=Nova+Square&display=swap" rel="stylesheet">
     <title>Bibliography Generator</title>
   </head>
-  <body>
+  <body onload="setSourceType()">
     <header>
       <h3 id="site-title">Bibliography Generator</h3>
       <div id="settings-buttons">
@@ -27,30 +28,30 @@
     </header>
     <main>
       <form class="type-selection">
-        <input type="radio" id="webpage" name="source-type" checked="checked">
+        <input type="radio" id="webpage" name="source-type" checked="checked" onclick="setSourceType()">
         <label for="webpage">Webpage</label>
-        <input type="radio" id="book" name="source-type">
+        <input type="radio" id="book" name="source-type" onclick="setSourceType()">
         <label for="book">Book</label>
       </form>
       <form class="source-info">
         <fieldset>
           <h2>Source Data</h2>
-          <div class="data-input title-input">
+          <div id="title-input" class="data-input">
             <input id="title" type="text" placeholder="Title">
           </div>
-          <div class="data-input name-input">
+          <div id="name-input" class="data-input">
             <input id="name" type="text" placeholder="Author's name">
           </div>
-          <div class="data-input last-name-input">
+          <div id="last-name-input" class="data-input">
             <input id="last-name" type="text" placeholder="Author's last name">
           </div>
-          <div class="data-input year-input">
+          <div id="year-input" class="data-input">
             <input id="year" type="number" placeholder="Year">
           </div>
-          <div class="data-input publisher-input">
+          <div id="publisher-input" class="data-input">
             <input id="publisher" type="text" placeholder="Publisher">
           </div>
-          <div class="data-input link-input">
+          <div id="link-input" class="data-input">
             <input id="link" type="text" placeholder="Link">
           </div>
           <button type="button" onclick="updateOutput()">Get Bibliography</button>
