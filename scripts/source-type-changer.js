@@ -1,14 +1,16 @@
 let sourceType = localStorage.getItem('sourceType') || 'webpage';
 
 function applySourceType() {
-  if (sourceType === 'webpage') {
-    document.getElementById('webpage').checked = true;
-    document.getElementById('link-input').style.display = 'inline';
-    document.getElementById('publisher-input').style.display = 'none';
-  } else if (sourceType === 'book') {
-    document.getElementById('book').checked = true;
-    document.getElementById('publisher-input').style.display = 'inline';
-    document.getElementById('link-input').style.display = 'none';
+  document.getElementById(sourceType).checked = true;
+  switch (sourceType) {
+    case 'webpage':
+      document.getElementById('link-input').style.display = 'inline';
+      document.getElementById('publisher-input').style.display = 'none';
+      break;
+    case 'book':
+      document.getElementById('publisher-input').style.display = 'inline';
+      document.getElementById('link-input').style.display = 'none';
+      break;
   }
 }
 

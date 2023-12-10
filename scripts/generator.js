@@ -7,19 +7,17 @@ function getCitation() {
     citation += '. ';
     citation += '(' + document.getElementById('year').value + '). ';
     citation += document.getElementById('title').value + '. ';
-    if (document.getElementById('webpage').checked) {
-      citation += document.getElementById('link').value;
-    } else if (document.getElementById('book').checked) {
-      citation += document.getElementById('publisher').value;
-    }
   } else {
     citation += document.getElementById('title').value + ' ';
     citation += '(' + document.getElementById('year').value + '). ';
-    if (document.getElementById('webpage').checked) {
+  }
+  switch (sourceType) {
+    case 'webpage':
       citation += document.getElementById('link').value;
-    } else if (document.getElementById('book').checked) {
+      break;
+    case 'book':
       citation += document.getElementById('publisher').value;
-    }
+      break;
   }
   return citation;
 }
