@@ -1,4 +1,4 @@
-let theme = 'light';
+let theme = localStorage.getItem('theme') || 'light';
 
 function applyTheme() {
   const colors = document.querySelector(':root');
@@ -23,5 +23,6 @@ function applyTheme() {
 
 function changeTheme() {
   theme = (theme === 'light') ? 'dark' : 'light';
+  localStorage.setItem('theme', theme);
   applyTheme();
 }

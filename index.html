@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Mulish&family=Nova+Square&display=swap" rel="stylesheet">
     <title>Bibliography Generator</title>
   </head>
-  <body onload="setSourceType()">
+  <body onload="applySourceType(); applyTheme();">
     <header>
       <h3 id="site-title">Bibliography Generator</h3>
       <div id="settings-buttons">
@@ -28,9 +28,9 @@
     </header>
     <main>
       <form class="type-selection">
-        <input type="radio" id="webpage" name="source-type" checked="checked" onclick="setSourceType()">
+        <input type="radio" id="webpage" name="source-type" checked="checked" onclick="changeSourceType()">
         <label for="webpage">Webpage</label>
-        <input type="radio" id="book" name="source-type" onclick="setSourceType()">
+        <input type="radio" id="book" name="source-type" onclick="changeSourceType()">
         <label for="book">Book</label>
       </form>
       <form class="source-info">
