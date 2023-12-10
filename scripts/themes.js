@@ -1,8 +1,13 @@
-let theme = localStorage.getItem('theme') || 'light';
+const Themes = {
+  Light: 'light',
+  Dark: 'dark'
+};
+
+let theme = localStorage.getItem('theme') || Themes.Light;
 
 function applyTheme() {
   const colors = document.querySelector(':root');
-  if (theme === 'light') {
+  if (theme === Themes.Light) {
     colors.style.setProperty('--transparent-background', 'rgba(0, 0, 0, 0.08)');
     colors.style.setProperty('--background', '#e9ebec');
     colors.style.setProperty('--secondary-background', '#f7f8f8');
@@ -22,7 +27,7 @@ function applyTheme() {
 }
 
 function changeTheme() {
-  theme = (theme === 'light') ? 'dark' : 'light';
+  theme = (theme === Themes.Light) ? Themes.Dark : Themes.Light;
   localStorage.setItem('theme', theme);
   applyTheme();
 }

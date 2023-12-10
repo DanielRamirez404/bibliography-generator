@@ -1,13 +1,18 @@
-let sourceType = localStorage.getItem('sourceType') || 'webpage';
+const SourceTypes = {
+  Webpage: 'webpage',
+  Book: 'book'
+};
+
+let currentType = localStorage.getItem('sourceType') || SourceTypes.Webpage;
 
 function applySourceType() {
-  document.getElementById(sourceType).checked = true;
-  switch (sourceType) {
-    case 'webpage':
+  document.getElementById(currentType).checked = true;
+  switch (currentType) {
+    case SourceTypes.Webpage:
       document.getElementById('link-input').style.display = 'inline';
       document.getElementById('publisher-input').style.display = 'none';
       break;
-    case 'book':
+    case SourceTypes.Book:
       document.getElementById('publisher-input').style.display = 'inline';
       document.getElementById('link-input').style.display = 'none';
       break;
@@ -15,11 +20,11 @@ function applySourceType() {
 }
 
 function changeSourceType() {
-  if (document.getElementById('webpage').checked) {
-    sourceType = 'webpage'
-  } else if (document.getElementById('book').checked) {
-    sourceType = 'book';
+  if (document.getElementById(SourceTypes.Webpage).checked) {
+    currentType = SourceTypes.Webpage
+  } else if (document.getElementById(SourceTypes.Book).checked) {
+    currentType = SourceTypes.Book;
   }
-  localStorage.setItem('sourceType', sourceType);
+  localStorage.setItem('sourceType', currentType);
   applySourceType();
 }

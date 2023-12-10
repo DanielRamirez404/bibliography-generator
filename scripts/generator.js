@@ -1,7 +1,7 @@
 function getCitation() {
   const info = getInfo();
   let citation = '';
-  if (info.name !== '' && info.lastName !== '') {
+  if (info.author != '') {
     citation += info.author + ' ';
     citation += info.year + '. ';
     citation += info.title + '. ';
@@ -31,8 +31,7 @@ function getInfo() {
 }
 
 function getParsedAuthor(name, lastName) {
-  if (name === '') return '';
-  return (lastName === '') ? name : lastName + '. ' + name[0] + '.';
+  return (name === '') ? '' : ((lastName === '') ? name : lastName + '. ' + name[0] + '.');
 }
 
 function getParsedYear(year) {
