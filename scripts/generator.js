@@ -1,25 +1,42 @@
 function getCitation() {
+  const info = getInfo();
   let citation = '';
-  if (document.getElementById('name').value !== '' && document.getElementById('last-name').value !== '') {
-    citation += document.getElementById('last-name').value;
-    citation += ' ';
-    citation += document.getElementById('last-name').value[0];
-    citation += '. ';
-    citation += '(' + document.getElementById('year').value + '). ';
-    citation += document.getElementById('title').value + '. ';
+  if (info.name !== '' && info.lastName !== '') {
+    citation += info.author + ' ';
+    citation += info.year + '. ';
+    citation += info.title + '. ';
   } else {
-    citation += document.getElementById('title').value + ' ';
-    citation += '(' + document.getElementById('year').value + '). ';
+    citation += info.title + ' ';
+    citation += info.year + '. ';
   }
   switch (sourceType) {
     case 'webpage':
-      citation += document.getElementById('link').value;
+      citation += 'Retrieved from: ' + info.link;
       break;
     case 'book':
-      citation += document.getElementById('publisher').value;
+      citation += info.publisher;
       break;
   }
   return citation;
+}
+
+function getInfo() {
+  return {
+    author: getParsedAuthor(document.getElementById('name').value, document.getElementById('last-name').value),
+    year: getParsedYear(document.getElementById('year').value),
+    title: document.getElementById('title').value,
+    link: document.getElementById('link').value,
+    publisher: document.getElementById('publisher').value,
+  };
+}
+
+function getParsedAuthor(name, lastName) {
+  if (name === '') return '';
+  return (lastName === '') ? name : lastName + '. ' + name[0] + '.';
+}
+
+function getParsedYear(year) {
+  return (year === '') ? '(n.d)' : '(' + year + ')';
 }
 
 function updateOutput() {
